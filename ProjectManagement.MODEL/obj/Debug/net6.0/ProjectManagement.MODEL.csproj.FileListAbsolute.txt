@@ -1,0 +1,12 @@
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\bin\Debug\net6.0\ProjectManagement.MODEL.deps.json
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\bin\Debug\net6.0\ProjectManagement.MODEL.dll
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\bin\Debug\net6.0\ProjectManagement.MODEL.pdb
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\obj\Debug\net6.0\ProjectManagement.MODEL.csproj.AssemblyReference.cache
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\obj\Debug\net6.0\ProjectManagement.MODEL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\obj\Debug\net6.0\ProjectManagement.MODEL.AssemblyInfoInputs.cache
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\obj\Debug\net6.0\ProjectManagement.MODEL.AssemblyInfo.cs
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\obj\Debug\net6.0\ProjectManagement.MODEL.csproj.CoreCompileInputs.cache
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\obj\Debug\net6.0\ProjectManagement.MODEL.dll
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\obj\Debug\net6.0\refint\ProjectManagement.MODEL.dll
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\obj\Debug\net6.0\ProjectManagement.MODEL.pdb
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.MODEL\obj\Debug\net6.0\ref\ProjectManagement.MODEL.dll

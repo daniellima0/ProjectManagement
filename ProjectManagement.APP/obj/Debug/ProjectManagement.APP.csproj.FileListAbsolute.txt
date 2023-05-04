@@ -1,0 +1,10 @@
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\bin\Debug\ProjectManagement.APP.exe.config
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\bin\Debug\ProjectManagement.APP.exe
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\bin\Debug\ProjectManagement.APP.pdb
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\obj\Debug\ProjectManagement.APP.csproj.AssemblyReference.cache
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\obj\Debug\ProjectManagement.APP.csproj.SuggestedBindingRedirects.cache
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\obj\Debug\ProjectManagement.APP.Properties.Resources.resources
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\obj\Debug\ProjectManagement.APP.csproj.GenerateResource.cache
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\obj\Debug\ProjectManagement.APP.csproj.CoreCompileInputs.cache
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\obj\Debug\ProjectManagement.APP.exe
+C:\Users\danli\source\repos\ProjectManagement\ProjectManagement.APP\obj\Debug\ProjectManagement.APP.pdb
