@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danli\\source\\repos\\ProjectManagement\\ProjectManagement.MODEL\\ProjectManagement.MODEL.csproj": {}
+    "C:\\Users\\arthu\\Source\\Repos\\ProjectManagement\\ProjectManagement.MODEL\\ProjectManagement.MODEL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danli\\source\\repos\\ProjectManagement\\ProjectManagement.MODEL\\ProjectManagement.MODEL.csproj": {
+    "C:\\Users\\arthu\\Source\\Repos\\ProjectManagement\\ProjectManagement.MODEL\\ProjectManagement.MODEL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danli\\source\\repos\\ProjectManagement\\ProjectManagement.MODEL\\ProjectManagement.MODEL.csproj",
+        "projectUniqueName": "C:\\Users\\arthu\\Source\\Repos\\ProjectManagement\\ProjectManagement.MODEL\\ProjectManagement.MODEL.csproj",
         "projectName": "ProjectManagement.MODEL",
-        "projectPath": "C:\\Users\\danli\\source\\repos\\ProjectManagement\\ProjectManagement.MODEL\\ProjectManagement.MODEL.csproj",
-        "packagesPath": "C:\\Users\\danli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danli\\source\\repos\\ProjectManagement\\ProjectManagement.MODEL\\obj\\",
+        "projectPath": "C:\\Users\\arthu\\Source\\Repos\\ProjectManagement\\ProjectManagement.MODEL\\ProjectManagement.MODEL.csproj",
+        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arthu\\Source\\Repos\\ProjectManagement\\ProjectManagement.MODEL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\danli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
