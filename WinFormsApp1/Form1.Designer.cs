@@ -28,12 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            newButton = new Button();
+            listButton = new Button();
+            searchButton = new Button();
+            SuspendLayout();
+            // 
+            // newButton
+            // 
+            resources.ApplyResources(newButton, "newButton");
+            newButton.Name = "newButton";
+            newButton.UseVisualStyleBackColor = true;
+            newButton.Click += button1_Click;
+            // 
+            // listButton
+            // 
+            resources.ApplyResources(listButton, "listButton");
+            listButton.Name = "listButton";
+            listButton.UseVisualStyleBackColor = true;
+            // 
+            // searchButton
+            // 
+            resources.ApplyResources(searchButton, "searchButton");
+            searchButton.Name = "searchButton";
+            searchButton.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            resources.ApplyResources(this, "$this");
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            Controls.Add(searchButton);
+            Controls.Add(listButton);
+            Controls.Add(newButton);
+            Name = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button newButton;
+        private Button listButton;
+        private Button searchButton;
     }
 }
