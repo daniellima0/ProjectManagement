@@ -76,5 +76,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectManagement.BLL\ProjectManagement.BLL.csproj">
+      <Project>{70fce242-7dd8-450c-afb4-cc430b15493d}</Project>
+      <Name>ProjectManagement.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectManagement.DAL\ProjectManagement.DAL.csproj">
+      <Project>{682f599f-610c-4a1e-8a58-ecffd0e185ef}</Project>
+      <Name>ProjectManagement.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectManagement.MODEL\ProjectManagement.MODEL.csproj">
+      <Project>{26692a6b-10e7-40e5-98eb-b3ff7bf52332}</Project>
+      <Name>ProjectManagement.MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
