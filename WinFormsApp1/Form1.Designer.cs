@@ -31,14 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             newButton = new Button();
             listButton = new Button();
-            searchButton = new Button();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // newButton
             // 
             resources.ApplyResources(newButton, "newButton");
+            newButton.BackColor = Color.FromArgb(168, 208, 219);
+            newButton.FlatAppearance.BorderColor = Color.Black;
+            newButton.FlatAppearance.BorderSize = 0;
+            newButton.ForeColor = Color.Black;
             newButton.Name = "newButton";
-            newButton.UseVisualStyleBackColor = true;
+            newButton.UseVisualStyleBackColor = false;
             newButton.Click += button1_Click;
             // 
             // listButton
@@ -46,30 +51,42 @@
             resources.ApplyResources(listButton, "listButton");
             listButton.Name = "listButton";
             listButton.UseVisualStyleBackColor = true;
+            listButton.Click += listButton_Click;
             // 
-            // searchButton
+            // label1
             // 
-            resources.ApplyResources(searchButton, "searchButton");
-            searchButton.Name = "searchButton";
-            searchButton.UseVisualStyleBackColor = true;
+            resources.ApplyResources(label1, "label1");
+            label1.ForeColor = Color.FromArgb(228, 146, 115);
+            label1.Name = "label1";
+            label1.Click += label1_Click;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(label2, "label2");
+            label2.ForeColor = Color.White;
+            label2.Name = "label2";
+            label2.Click += label2_Click;
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
-            Controls.Add(searchButton);
+            BackColor = Color.FromArgb(43, 69, 112);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(listButton);
             Controls.Add(newButton);
             Name = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button newButton;
         private Button listButton;
-        private Button searchButton;
+        private Label label1;
+        private Label label2;
     }
 }
