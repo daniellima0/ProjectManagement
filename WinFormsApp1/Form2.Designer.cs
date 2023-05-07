@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            textBox2 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox5 = new TextBox();
-            textBox1 = new TextBox();
+            startDateTimePicker = new DateTimePicker();
+            managerNameTextBox = new TextBox();
+            finishDateTimePicker = new DateTimePicker();
+            summaryTextBox = new TextBox();
+            projectNameTextBox = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            comboBox1 = new ComboBox();
+            statusComboBox = new ComboBox();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
             okButton = new Button();
             cancelButton = new Button();
+            errorProvider = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -54,48 +57,54 @@
             label1.TabIndex = 0;
             label1.Text = "Fill in the following fields";
             // 
-            // dateTimePicker2
+            // startDateTimePicker
             // 
-            dateTimePicker2.Location = new Point(262, 216);
-            dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(320, 27);
-            dateTimePicker2.TabIndex = 3;
+            startDateTimePicker.Location = new Point(262, 216);
+            startDateTimePicker.Margin = new Padding(3, 4, 3, 4);
+            startDateTimePicker.Name = "startDateTimePicker";
+            startDateTimePicker.Size = new Size(320, 27);
+            startDateTimePicker.TabIndex = 3;
             // 
-            // textBox2
+            // managerNameTextBox
             // 
-            textBox2.Location = new Point(262, 149);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(320, 32);
-            textBox2.TabIndex = 2;
+            managerNameTextBox.Location = new Point(262, 149);
+            managerNameTextBox.Margin = new Padding(3, 4, 3, 4);
+            managerNameTextBox.Multiline = true;
+            managerNameTextBox.Name = "managerNameTextBox";
+            managerNameTextBox.Size = new Size(320, 32);
+            managerNameTextBox.TabIndex = 2;
+            managerNameTextBox.Validating += managerNameTextBox_Validating;
             // 
-            // dateTimePicker1
+            // finishDateTimePicker
             // 
-            dateTimePicker1.Location = new Point(262, 280);
-            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(320, 27);
-            dateTimePicker1.TabIndex = 4;
+            finishDateTimePicker.Location = new Point(262, 280);
+            finishDateTimePicker.Margin = new Padding(3, 4, 3, 4);
+            finishDateTimePicker.Name = "finishDateTimePicker";
+            finishDateTimePicker.Size = new Size(320, 27);
+            finishDateTimePicker.TabIndex = 4;
+            finishDateTimePicker.Validating += finishDateTimePicker_Validating;
             // 
-            // textBox5
+            // summaryTextBox
             // 
-            textBox5.Location = new Point(262, 341);
-            textBox5.Margin = new Padding(3, 4, 3, 4);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(320, 103);
-            textBox5.TabIndex = 5;
+            summaryTextBox.Location = new Point(262, 341);
+            summaryTextBox.Margin = new Padding(3, 4, 3, 4);
+            summaryTextBox.Multiline = true;
+            summaryTextBox.Name = "summaryTextBox";
+            summaryTextBox.Size = new Size(320, 103);
+            summaryTextBox.TabIndex = 5;
+            summaryTextBox.TextChanged += summaryTextBox_TextChanged;
+            summaryTextBox.Validating += summaryTextBox_Validating;
             // 
-            // textBox1
+            // projectNameTextBox
             // 
-            textBox1.Location = new Point(262, 85);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(320, 32);
-            textBox1.TabIndex = 1;
+            projectNameTextBox.Location = new Point(262, 85);
+            projectNameTextBox.Margin = new Padding(3, 4, 3, 4);
+            projectNameTextBox.Multiline = true;
+            projectNameTextBox.Name = "projectNameTextBox";
+            projectNameTextBox.Size = new Size(320, 32);
+            projectNameTextBox.TabIndex = 1;
+            projectNameTextBox.TextChanged += projectNameTextBox_TextChanged;
+            projectNameTextBox.Validating += projectNameTextBox_Validating;
             // 
             // label2
             // 
@@ -115,15 +124,17 @@
             label3.TabIndex = 11;
             label3.Text = "Finish Date";
             // 
-            // comboBox1
+            // statusComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "not started", "in progress", "completed" });
-            comboBox1.Location = new Point(262, 481);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(320, 28);
-            comboBox1.TabIndex = 6;
+            statusComboBox.FormattingEnabled = true;
+            statusComboBox.Items.AddRange(new object[] { "not started", "in progress", "completed" });
+            statusComboBox.Location = new Point(262, 481);
+            statusComboBox.Margin = new Padding(3, 4, 3, 4);
+            statusComboBox.Name = "statusComboBox";
+            statusComboBox.Size = new Size(320, 28);
+            statusComboBox.TabIndex = 6;
+            statusComboBox.SelectedIndexChanged += statusComboBox_SelectedIndexChanged;
+            statusComboBox.Validating += statusComboBox_Validating;
             // 
             // label4
             // 
@@ -177,9 +188,13 @@
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(134, 29);
             cancelButton.TabIndex = 17;
-            cancelButton.Text = "CANCEL";
+            cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = true;
-            cancelButton.Click += button1_Click_1;
+            cancelButton.Click += cancelButton_Click_1;
+            // 
+            // errorProvider
+            // 
+            errorProvider.ContainerControl = this;
             // 
             // Form2
             // 
@@ -192,18 +207,19 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(comboBox1);
+            Controls.Add(statusComboBox);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox2);
+            Controls.Add(projectNameTextBox);
+            Controls.Add(startDateTimePicker);
+            Controls.Add(finishDateTimePicker);
+            Controls.Add(summaryTextBox);
+            Controls.Add(managerNameTextBox);
             Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form2";
             Text = "New Project";
+            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,19 +227,20 @@
         #endregion
 
         private Label label1;
-        private DateTimePicker dateTimePicker2;
-        private TextBox textBox2;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox5;
-        private TextBox textBox1;
+        private DateTimePicker startDateTimePicker;
+        private TextBox managerNameTextBox;
+        private DateTimePicker finishDateTimePicker;
+        private TextBox summaryTextBox;
+        private TextBox projectNameTextBox;
         private Label label2;
         private Label label3;
-        private ComboBox comboBox1;
+        private ComboBox statusComboBox;
         private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
         private Button okButton;
         private Button cancelButton;
+        private ErrorProvider errorProvider;
     }
 }
