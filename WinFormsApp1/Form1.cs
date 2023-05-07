@@ -86,5 +86,16 @@ namespace ProjectManagement.APP
             listView1.Items.Clear();
             displayAllProjects();
         }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //Form2 newForm2 = new Form2();
+            //newForm2.ShowDialog();
+            ListViewHitTestInfo info = listView1.HitTest(e.X, e.Y);
+            ListViewItem item = info.Item;
+            label1.Text = item.SubItems[0].Text;
+            Form2 newForm2 = new Form2(item.SubItems[0].Text);
+            newForm2.ShowDialog();
+        }
     }
 }

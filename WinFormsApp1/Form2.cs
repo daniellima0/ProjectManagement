@@ -11,14 +11,31 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjectManagement.APP
 {
     public partial class Form2 : Form
     {
+        private string listViewItemId;
         public Form2()
         {
             InitializeComponent();
+        }
+
+        public Form2(string listViewItemId)
+        {
+            InitializeComponent();
+            this.listViewItemId = listViewItemId;
+            ProjectRepository projectRepository = new ProjectRepository();
+            StatusRepository statusRepository = new StatusRepository();
+            Project selectedProject = projectRepository.GetById(int.Parse(listViewItemId));
+            projectNameTextBox.Text = selectedProject.ProjectName.ToString();
+            managerNameTextBox.Text = selectedProject.ManagerName.ToString();
+            startDateTimePicker.Value = DateTime.Parse(selectedProject.StartDate);
+            finishDateTimePicker.Value = DateTime.Parse(selectedProject.FinishDate);
+            summaryTextBox.Text = selectedProject.Summary.ToString();
+            statusComboBox.Text = statusRepository.GetById(int.Parse(selectedProject.IdStatus.ToString())).Status1.ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -40,7 +57,32 @@ namespace ProjectManagement.APP
             project.FinishDate = finishDateTimePicker.Value.ToString();
             project.Summary = summaryTextBox.Text;
 
-            projectRepository.Add(project);
+            var allProjects = projectRepository.GetAll();
+
+            bool itExists = false;
+            int j = 0;
+
+            for (int i = 0; i < allProjects.Count; i++)
+            {
+                if (project.ProjectName == allProjects[i].ProjectName)
+                {
+                    j = i;
+                    itExists = true;
+                    break;
+                }
+            }
+
+            if (itExists)
+            {
+                project.Id = allProjects[j].Id;
+                projectRepository.Update(project);
+
+            }
+            else
+            {
+                projectRepository.Add(project);
+
+            }
 
             //closing window
             this.Close();
