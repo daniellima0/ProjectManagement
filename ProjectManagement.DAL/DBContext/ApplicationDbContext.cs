@@ -18,11 +18,11 @@ public partial class ApplicationDbContext : DbContext
 
     public virtual DbSet<Project> Projects { get; set; }
 
-    public virtual DbSet<Status> Status { get; set; }
+    public virtual DbSet<Status> Statuses { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\arthu\\Source\\Repos\\ProjectManagement\\ProjectManagement.DAL\\database\\database.mdf;Integrated Security=True");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\danli\\source\\repos\\ProjectManagement\\ProjectManagement.DAL\\database\\database.mdf;Integrated Security=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -58,18 +58,16 @@ public partial class ApplicationDbContext : DbContext
             entity.HasOne(d => d.IdStatusNavigation).WithMany(p => p.Projects)
                 .HasForeignKey(d => d.IdStatus)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Project__id_stat__38996AB5");
+                .HasConstraintName("FK__Project__id_stat__49C3F6B7");
         });
 
         modelBuilder.Entity<Status>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Status__3213E83F8F098038");
+            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3213E83FE310A589");
 
             entity.ToTable("Status");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Status1)
                 .HasMaxLength(50)
                 .IsUnicode(false)

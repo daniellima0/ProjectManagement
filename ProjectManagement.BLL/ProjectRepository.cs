@@ -5,7 +5,7 @@ namespace ProjectManagement.BLL
 {
     public class ProjectRepository
     {
-        public static void Add(Project _project)
+        public void Add(Project _project)
         {
             using (var dbContext = new ApplicationDbContext())
             {
@@ -14,7 +14,7 @@ namespace ProjectManagement.BLL
             }
         }
 
-        public static Project GetById(int Id)
+        public Project GetById(int Id)
         {
             using (var dbContext = new ApplicationDbContext())
             {
@@ -23,7 +23,7 @@ namespace ProjectManagement.BLL
             }
         }
 
-        public static List<Project> GetAll()
+        public List<Project> GetAll()
         {
             using (var dbContext = new ApplicationDbContext())
             {
@@ -32,7 +32,7 @@ namespace ProjectManagement.BLL
             }
         }
 
-        public static void Update(Project _project)
+        public void Update(Project _project)
         {
             using (var dbContext = new ApplicationDbContext())
             {
@@ -48,11 +48,11 @@ namespace ProjectManagement.BLL
             }
         }
 
-        public static void Delete(Project _project)
+        public void Delete(Project _project)
         {
             using (var dbContext = new ApplicationDbContext())
             {
-                var project = dbContext.Status.Single(p => p.Id == _project.Id);
+                var project = dbContext.Statuses.Single(p => p.Id == _project.Id);
                 dbContext.Remove(project);
                 dbContext.SaveChanges();
             }
