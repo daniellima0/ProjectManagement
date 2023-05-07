@@ -27,7 +27,9 @@ namespace ProjectManagement.APP
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new Form1());
+            Form1 form1 = new Form1();
+
+            Application.Run(form1);
         }
     }
 }

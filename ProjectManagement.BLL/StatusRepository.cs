@@ -24,6 +24,15 @@ namespace ProjectManagement.BLL
             }
         }
 
+        public Status GetIdByStatusName(string statusName)
+        {
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var status = dbContext.Statuses.Single(p => p.Status1 == statusName);
+                return status;
+            }
+        }
+
         public List<Status> GetAll()
         {
             using(var dbContext = new ApplicationDbContext())

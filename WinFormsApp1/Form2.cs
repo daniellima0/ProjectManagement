@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,10 +28,22 @@ namespace ProjectManagement.APP
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            
+            ProjectRepository projectRepository = new ProjectRepository();
+            StatusRepository statusRepository = new StatusRepository();
+            Project project = new Project();
+
+            var status = statusRepository.GetIdByStatusName(statusComboBox.Text);
+            project.IdStatus = status.Id;
+            project.ProjectName = projectNameTextBox.Text;
+            project.ManagerName = managerNameTextBox.Text;
+            project.StartDate = startDateTimePicker.Value.ToString();
+            project.FinishDate = finishDateTimePicker.Value.ToString();
+            project.Summary = summaryTextBox.Text;
+
+            projectRepository.Add(project);
 
             //closing window
-            //this.Close();
+            this.Close();
         }
 
         private void cancelButton_Click_1(object sender, EventArgs e)

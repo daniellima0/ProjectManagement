@@ -80,5 +80,11 @@ namespace ProjectManagement.APP
         {
 
         }
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            displayAllProjects();
+        }
     }
 }

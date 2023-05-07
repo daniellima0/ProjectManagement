@@ -38,11 +38,12 @@
             columnHeader6 = new ColumnHeader();
             columnHeader8 = new ColumnHeader();
             columnHeader9 = new ColumnHeader();
+            refresh = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(56, 77);
+            button1.Location = new Point(93, 79);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(102, 31);
@@ -104,11 +105,22 @@
             columnHeader9.Text = "";
             columnHeader9.Width = 50;
             // 
+            // refresh
+            // 
+            refresh.Location = new Point(266, 80);
+            refresh.Name = "refresh";
+            refresh.Size = new Size(94, 29);
+            refresh.TabIndex = 3;
+            refresh.Text = "Refresh";
+            refresh.UseVisualStyleBackColor = true;
+            refresh.Click += refresh_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1243, 803);
+            Controls.Add(refresh);
             Controls.Add(listView1);
             Controls.Add(button1);
             Margin = new Padding(3, 4, 3, 4);
@@ -129,5 +141,6 @@
         private ColumnHeader columnHeader6;
         private ColumnHeader columnHeader8;
         private ColumnHeader columnHeader9;
+        private Button refresh;
     }
 }
