@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
             listView1 = new ListView();
             columnHeader1 = new ColumnHeader();
@@ -39,6 +40,10 @@
             columnHeader8 = new ColumnHeader();
             columnHeader9 = new ColumnHeader();
             refresh = new Button();
+            deleteButton = new Button();
+            deleteTextBox = new TextBox();
+            errorProvider = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -116,11 +121,36 @@
             refresh.UseVisualStyleBackColor = true;
             refresh.Click += refresh_Click;
             // 
+            // deleteButton
+            // 
+            deleteButton.Location = new Point(1062, 79);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(94, 29);
+            deleteButton.TabIndex = 4;
+            deleteButton.Text = "Delete";
+            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
+            // 
+            // deleteTextBox
+            // 
+            deleteTextBox.Location = new Point(920, 79);
+            deleteTextBox.Name = "deleteTextBox";
+            deleteTextBox.PlaceholderText = "Insert the id";
+            deleteTextBox.Size = new Size(125, 27);
+            deleteTextBox.TabIndex = 5;
+            deleteTextBox.Validating += deleteTextBox_Validating;
+            // 
+            // errorProvider
+            // 
+            errorProvider.ContainerControl = this;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1243, 803);
+            Controls.Add(deleteTextBox);
+            Controls.Add(deleteButton);
             Controls.Add(refresh);
             Controls.Add(listView1);
             Controls.Add(button1);
@@ -128,7 +158,9 @@
             Name = "Form1";
             Text = "Project Management";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -143,5 +175,8 @@
         private ColumnHeader columnHeader8;
         private ColumnHeader columnHeader9;
         private Button refresh;
+        private Button deleteButton;
+        private TextBox deleteTextBox;
+        private ErrorProvider errorProvider;
     }
 }

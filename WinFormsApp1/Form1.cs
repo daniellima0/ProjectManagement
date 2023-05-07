@@ -93,9 +93,40 @@ namespace ProjectManagement.APP
             //newForm2.ShowDialog();
             ListViewHitTestInfo info = listView1.HitTest(e.X, e.Y);
             ListViewItem item = info.Item;
-            label1.Text = item.SubItems[0].Text;
             Form2 newForm2 = new Form2(item.SubItems[0].Text);
             newForm2.ShowDialog();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(deleteTextBox.Text, out var convertedValue))
+            {
+                return;
+            }
+            int projectId = int.Parse(deleteTextBox.Text);
+            ProjectRepository projectRepository = new ProjectRepository();
+            projectRepository.Delete(projectRepository.GetById(projectId));
+        }
+
+        private void deleteTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (!int.TryParse(deleteTextBox.Text, out var convertedValue))
+            {
+                e.Cancel = true;
+                deleteTextBox.Focus();
+                errorProvider.SetError(deleteTextBox, "Please insert a valid number");
+            }
+            else if (string.IsNullOrEmpty(deleteTextBox.Text))
+            {
+                e.Cancel = true;
+                deleteTextBox.Focus();
+                errorProvider.SetError(deleteTextBox, "Please fill this field");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(deleteTextBox, null);
+            }
         }
     }
 }

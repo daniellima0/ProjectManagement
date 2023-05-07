@@ -52,7 +52,7 @@ namespace ProjectManagement.BLL
         {
             using (var dbContext = new ApplicationDbContext())
             {
-                var project = dbContext.Statuses.Single(p => p.Id == _project.Id);
+                var project = dbContext.Projects.Single(p => p.Id == _project.Id);
                 dbContext.Remove(project);
                 dbContext.SaveChanges();
             }
