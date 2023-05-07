@@ -24,17 +24,19 @@ namespace ProjectManagement.APP
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void okButton_Click(object sender, EventArgs e)
         {
             //Status status = new Status();
             //status.Status1 = "orlando";
             //StatusRepository statusRepository = new StatusRepository();
             //statusRepository.Add(status);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //Form1 home = new Form1();
+            //home.Show();
+            this.Close();
         }
     }
 }

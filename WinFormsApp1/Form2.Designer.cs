@@ -48,7 +48,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(268, 47);
+            label1.Location = new Point(249, 42);
             label1.Name = "label1";
             label1.Size = new Size(176, 20);
             label1.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(281, 221);
+            dateTimePicker2.Location = new Point(262, 216);
             dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(320, 27);
@@ -64,7 +64,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(281, 154);
+            textBox2.Location = new Point(262, 149);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
@@ -73,7 +73,7 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(281, 285);
+            dateTimePicker1.Location = new Point(262, 280);
             dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(320, 27);
@@ -81,7 +81,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(281, 346);
+            textBox5.Location = new Point(262, 341);
             textBox5.Margin = new Padding(3, 4, 3, 4);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
@@ -90,7 +90,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(281, 90);
+            textBox1.Location = new Point(262, 85);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
@@ -100,7 +100,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(161, 224);
+            label2.Location = new Point(142, 219);
             label2.Name = "label2";
             label2.Size = new Size(76, 20);
             label2.TabIndex = 10;
@@ -109,7 +109,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(161, 288);
+            label3.Location = new Point(142, 283);
             label3.Name = "label3";
             label3.Size = new Size(82, 20);
             label3.TabIndex = 11;
@@ -119,7 +119,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "not started", "in progress", "completed" });
-            comboBox1.Location = new Point(281, 486);
+            comboBox1.Location = new Point(262, 481);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(320, 28);
@@ -128,7 +128,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(161, 96);
+            label4.Location = new Point(142, 91);
             label4.Name = "label4";
             label4.Size = new Size(99, 20);
             label4.TabIndex = 13;
@@ -137,7 +137,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(161, 160);
+            label5.Location = new Point(142, 155);
             label5.Name = "label5";
             label5.Size = new Size(112, 20);
             label5.TabIndex = 14;
@@ -146,7 +146,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(161, 352);
+            label6.Location = new Point(142, 347);
             label6.Name = "label6";
             label6.Size = new Size(71, 20);
             label6.TabIndex = 15;
@@ -155,7 +155,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(161, 489);
+            label7.Location = new Point(142, 484);
             label7.Name = "label7";
             label7.Size = new Size(49, 20);
             label7.TabIndex = 16;
@@ -163,9 +163,9 @@
             // 
             // okButton
             // 
-            okButton.Location = new Point(416, 579);
+            okButton.Location = new Point(449, 556);
             okButton.Name = "okButton";
-            okButton.Size = new Size(94, 29);
+            okButton.Size = new Size(134, 29);
             okButton.TabIndex = 8;
             okButton.Text = "OK";
             okButton.UseVisualStyleBackColor = true;
@@ -173,12 +173,13 @@
             // 
             // cancelButton
             // 
-            cancelButton.Location = new Point(228, 579);
+            cancelButton.Location = new Point(262, 556);
             cancelButton.Name = "cancelButton";
-            cancelButton.Size = new Size(94, 29);
+            cancelButton.Size = new Size(134, 29);
             cancelButton.TabIndex = 17;
-            cancelButton.Text = "button1";
+            cancelButton.Text = "CANCEL";
             cancelButton.UseVisualStyleBackColor = true;
+            cancelButton.Click += button1_Click_1;
             // 
             // Form2
             // 
