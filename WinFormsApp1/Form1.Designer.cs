@@ -1,14 +1,14 @@
-﻿namespace WinFormsApp1
+﻿namespace ProjectManagement.APP
 {
     partial class Form1
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,70 +23,78 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            newButton = new Button();
-            listButton = new Button();
             label1 = new Label();
             label2 = new Label();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
-            // 
-            // newButton
-            // 
-            resources.ApplyResources(newButton, "newButton");
-            newButton.BackColor = Color.FromArgb(168, 208, 219);
-            newButton.FlatAppearance.BorderColor = Color.Black;
-            newButton.FlatAppearance.BorderSize = 0;
-            newButton.ForeColor = Color.Black;
-            newButton.Name = "newButton";
-            newButton.UseVisualStyleBackColor = false;
-            newButton.Click += button1_Click;
-            // 
-            // listButton
-            // 
-            resources.ApplyResources(listButton, "listButton");
-            listButton.Name = "listButton";
-            listButton.UseVisualStyleBackColor = true;
-            listButton.Click += listButton_Click;
             // 
             // label1
             // 
-            resources.ApplyResources(label1, "label1");
-            label1.ForeColor = Color.FromArgb(228, 146, 115);
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Location = new Point(372, 140);
             label1.Name = "label1";
+            label1.Size = new Size(57, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Welcome";
             label1.Click += label1_Click;
             // 
             // label2
             // 
-            resources.ApplyResources(label2, "label2");
-            label2.ForeColor = Color.White;
+            label2.AutoSize = true;
+            label2.Location = new Point(334, 168);
             label2.Name = "label2";
+            label2.Size = new Size(132, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Store your projects here";
             label2.Click += label2_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(356, 243);
+            button1.Name = "button1";
+            button1.Size = new Size(89, 23);
+            button1.TabIndex = 2;
+            button1.Text = "New Project";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(356, 288);
+            button2.Name = "button2";
+            button2.Size = new Size(89, 23);
+            button2.TabIndex = 3;
+            button2.Text = "List Projects";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
-            resources.ApplyResources(this, "$this");
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(43, 69, 112);
+            ClientSize = new Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(listButton);
-            Controls.Add(newButton);
             Name = "Form1";
-            Load += Form1_Load;
+            Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button newButton;
-        private Button listButton;
         private Label label1;
         private Label label2;
+        private Button button1;
+        private Button button2;
     }
 }

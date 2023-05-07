@@ -1,7 +1,7 @@
 using ProjectManagement.BLL;
 using ProjectManagement.MODEL;
 
-namespace WinFormsApp1
+namespace ProjectManagement.APP
 {
     internal static class Program
     {
