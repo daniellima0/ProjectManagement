@@ -99,34 +99,14 @@ namespace ProjectManagement.APP
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(deleteTextBox.Text, out var convertedValue))
-            {
-                return;
-            }
-            int projectId = int.Parse(deleteTextBox.Text);
-            ProjectRepository projectRepository = new ProjectRepository();
-            projectRepository.Delete(projectRepository.GetById(projectId));
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
         }
 
-        private void deleteTextBox_Validating(object sender, CancelEventArgs e)
+
+        private void deleteTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (!int.TryParse(deleteTextBox.Text, out var convertedValue))
-            {
-                e.Cancel = true;
-                deleteTextBox.Focus();
-                errorProvider.SetError(deleteTextBox, "Please insert a valid number");
-            }
-            else if (string.IsNullOrEmpty(deleteTextBox.Text))
-            {
-                e.Cancel = true;
-                deleteTextBox.Focus();
-                errorProvider.SetError(deleteTextBox, "Please fill this field");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(deleteTextBox, null);
-            }
+
         }
     }
 }

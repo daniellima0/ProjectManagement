@@ -1,4 +1,7 @@
-﻿namespace ProjectManagement.MODEL;
+﻿using System;
+using System.Collections.Generic;
+
+namespace ProjectManagement.MODEL;
 
 public partial class Status
 {

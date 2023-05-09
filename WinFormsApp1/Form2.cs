@@ -49,6 +49,11 @@ namespace ProjectManagement.APP
             StatusRepository statusRepository = new StatusRepository();
             Project project = new Project();
 
+            if (string.IsNullOrEmpty(statusComboBox.Text))
+            {
+                return;
+            }
+
             var status = statusRepository.GetIdByStatusName(statusComboBox.Text);
             project.IdStatus = status.Id;
             project.ProjectName = projectNameTextBox.Text;
@@ -76,11 +81,12 @@ namespace ProjectManagement.APP
             {
                 project.Id = allProjects[j].Id;
                 projectRepository.Update(project);
-
+                MessageBox.Show("Project Successfully Updated");
             }
             else
             {
                 projectRepository.Add(project);
+                MessageBox.Show("Project Successfully Added");
 
             }
 

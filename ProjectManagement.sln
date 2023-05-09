@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement.DAL", "Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement.MODEL", "ProjectManagement.MODEL\ProjectManagement.MODEL.csproj", "{26692A6B-10E7-40E5-98EB-B3FF7BF52332}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagement.APP", "WinFormsApp1\ProjectManagement.APP.csproj", "{5E7F0689-3EF3-47D9-AD11-270047EDAE81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement.APP", "WinFormsApp1\ProjectManagement.APP.csproj", "{5E7F0689-3EF3-47D9-AD11-270047EDAE81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{43E021AA-4E93-4501-A328-FBEFB7EFA53D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5E7F0689-3EF3-47D9-AD11-270047EDAE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E7F0689-3EF3-47D9-AD11-270047EDAE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E7F0689-3EF3-47D9-AD11-270047EDAE81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E021AA-4E93-4501-A328-FBEFB7EFA53D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E021AA-4E93-4501-A328-FBEFB7EFA53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E021AA-4E93-4501-A328-FBEFB7EFA53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E021AA-4E93-4501-A328-FBEFB7EFA53D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

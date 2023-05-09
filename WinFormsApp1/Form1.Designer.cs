@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             button1 = new Button();
             listView1 = new ListView();
             columnHeader1 = new ColumnHeader();
@@ -41,9 +40,6 @@
             columnHeader9 = new ColumnHeader();
             refresh = new Button();
             deleteButton = new Button();
-            deleteTextBox = new TextBox();
-            errorProvider = new ErrorProvider(components);
-            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -51,7 +47,7 @@
             button1.Location = new Point(93, 79);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(102, 31);
+            button1.Size = new Size(94, 29);
             button1.TabIndex = 1;
             button1.Text = "New Project";
             button1.UseVisualStyleBackColor = true;
@@ -113,7 +109,7 @@
             // 
             // refresh
             // 
-            refresh.Location = new Point(266, 80);
+            refresh.Location = new Point(225, 81);
             refresh.Name = "refresh";
             refresh.Size = new Size(94, 29);
             refresh.TabIndex = 3;
@@ -123,7 +119,7 @@
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(1062, 79);
+            deleteButton.Location = new Point(357, 81);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(94, 29);
             deleteButton.TabIndex = 4;
@@ -131,25 +127,11 @@
             deleteButton.UseVisualStyleBackColor = true;
             deleteButton.Click += deleteButton_Click;
             // 
-            // deleteTextBox
-            // 
-            deleteTextBox.Location = new Point(920, 79);
-            deleteTextBox.Name = "deleteTextBox";
-            deleteTextBox.PlaceholderText = "Insert the id";
-            deleteTextBox.Size = new Size(125, 27);
-            deleteTextBox.TabIndex = 5;
-            deleteTextBox.Validating += deleteTextBox_Validating;
-            // 
-            // errorProvider
-            // 
-            errorProvider.ContainerControl = this;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1243, 803);
-            Controls.Add(deleteTextBox);
             Controls.Add(deleteButton);
             Controls.Add(refresh);
             Controls.Add(listView1);
@@ -158,9 +140,7 @@
             Name = "Form1";
             Text = "Project Management";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -176,7 +156,5 @@
         private ColumnHeader columnHeader9;
         private Button refresh;
         private Button deleteButton;
-        private TextBox deleteTextBox;
-        private ErrorProvider errorProvider;
     }
 }
