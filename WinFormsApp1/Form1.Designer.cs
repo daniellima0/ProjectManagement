@@ -28,133 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
-            listView1 = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
-            columnHeader5 = new ColumnHeader();
-            columnHeader6 = new ColumnHeader();
-            columnHeader8 = new ColumnHeader();
-            columnHeader9 = new ColumnHeader();
-            refresh = new Button();
             deleteButton = new Button();
+            listButton = new Button();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(93, 79);
+            button1.Anchor = AnchorStyles.None;
+            button1.BackColor = Color.SlateBlue;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(894, 249);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(247, 50);
             button1.TabIndex = 1;
             button1.Text = "New Project";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // listView1
-            // 
-            listView1.Anchor = AnchorStyles.None;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6, columnHeader8, columnHeader9 });
-            listView1.FullRowSelect = true;
-            listView1.GridLines = true;
-            listView1.Location = new Point(93, 149);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(1063, 535);
-            listView1.TabIndex = 2;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
-            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
-            listView1.MouseDoubleClick += listView1_MouseDoubleClick;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "ID";
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Project Name";
-            columnHeader2.Width = 250;
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Manager Name";
-            columnHeader3.Width = 250;
-            // 
-            // columnHeader4
-            // 
-            columnHeader4.Text = "Start Date";
-            columnHeader4.Width = 150;
-            // 
-            // columnHeader5
-            // 
-            columnHeader5.Text = "Finish Date";
-            columnHeader5.Width = 150;
-            // 
-            // columnHeader6
-            // 
-            columnHeader6.Text = "Status";
-            columnHeader6.Width = 100;
-            // 
-            // columnHeader8
-            // 
-            columnHeader8.Text = "";
-            columnHeader8.Width = 50;
-            // 
-            // columnHeader9
-            // 
-            columnHeader9.Text = "";
-            columnHeader9.Width = 50;
-            // 
-            // refresh
-            // 
-            refresh.Location = new Point(225, 81);
-            refresh.Name = "refresh";
-            refresh.Size = new Size(94, 29);
-            refresh.TabIndex = 3;
-            refresh.Text = "Refresh";
-            refresh.UseVisualStyleBackColor = true;
-            refresh.Click += refresh_Click;
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(357, 81);
+            deleteButton.Anchor = AnchorStyles.None;
+            deleteButton.BackColor = Color.SlateBlue;
+            deleteButton.FlatStyle = FlatStyle.Popup;
+            deleteButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            deleteButton.Location = new Point(894, 423);
             deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(94, 29);
+            deleteButton.Size = new Size(247, 50);
             deleteButton.TabIndex = 4;
             deleteButton.Text = "Delete";
-            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.UseVisualStyleBackColor = false;
             deleteButton.Click += deleteButton_Click;
+            // 
+            // listButton
+            // 
+            listButton.Anchor = AnchorStyles.None;
+            listButton.BackColor = Color.SlateBlue;
+            listButton.FlatStyle = FlatStyle.Popup;
+            listButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            listButton.Location = new Point(894, 336);
+            listButton.Name = "listButton";
+            listButton.Size = new Size(247, 50);
+            listButton.TabIndex = 5;
+            listButton.Text = "All Projects";
+            listButton.UseVisualStyleBackColor = false;
+            listButton.Click += button2_Click_1;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.ActiveCaption;
+            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.MidnightBlue;
+            label1.Location = new Point(101, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(605, 50);
+            label1.TabIndex = 6;
+            label1.Text = "Welcome to Project Management\r\n";
+            label1.Click += label1_Click_1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(151, 88);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(512, 512);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1243, 803);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1243, 620);
+            Controls.Add(pictureBox1);
+            Controls.Add(label1);
+            Controls.Add(listButton);
             Controls.Add(deleteButton);
-            Controls.Add(refresh);
-            Controls.Add(listView1);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Project Management";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private Button button1;
-        private ListView listView1;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader5;
-        private ColumnHeader columnHeader6;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader9;
-        private Button refresh;
         private Button deleteButton;
+        private Button listButton;
+        private Label label1;
+        private PictureBox pictureBox1;
     }
 }

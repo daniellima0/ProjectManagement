@@ -41,20 +41,36 @@ namespace ProjectManagement.APP
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(deleteTextBox.Text, out var convertedValue))
+            try
             {
-                return;
+                if (!int.TryParse(deleteTextBox.Text, out var convertedValue))
+                {
+                    return;
+                }
+                int projectId = int.Parse(deleteTextBox.Text);
+                ProjectRepository projectRepository = new ProjectRepository();
+                projectRepository.Delete(projectRepository.GetById(projectId));
+                MessageBox.Show("Project Deleted.");
+                this.Close();
             }
-            int projectId = int.Parse(deleteTextBox.Text);
-            ProjectRepository projectRepository = new ProjectRepository();
-            projectRepository.Delete(projectRepository.GetById(projectId));
-            MessageBox.Show("Project Deleted.");
-            this.Close();
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Unable to Delete.");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void deleteTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

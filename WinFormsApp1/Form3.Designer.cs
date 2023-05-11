@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             deleteTextBox = new TextBox();
             deleteButton = new Button();
             errorProvider = new ErrorProvider(components);
@@ -39,20 +40,26 @@
             // 
             // deleteTextBox
             // 
-            deleteTextBox.Location = new Point(322, 200);
+            deleteTextBox.Anchor = AnchorStyles.None;
+            deleteTextBox.Location = new Point(102, 102);
             deleteTextBox.Name = "deleteTextBox";
             deleteTextBox.Size = new Size(156, 27);
             deleteTextBox.TabIndex = 0;
+            deleteTextBox.TextChanged += deleteTextBox_TextChanged;
             deleteTextBox.Validating += deleteTextBox_Validating;
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(420, 251);
+            deleteButton.Anchor = AnchorStyles.None;
+            deleteButton.BackColor = Color.SlateBlue;
+            deleteButton.FlatStyle = FlatStyle.Popup;
+            deleteButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            deleteButton.Location = new Point(200, 153);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(94, 29);
             deleteButton.TabIndex = 1;
             deleteButton.Text = "DELETE";
-            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.UseVisualStyleBackColor = false;
             deleteButton.Click += deleteButton_Click;
             // 
             // errorProvider
@@ -61,32 +68,41 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(322, 177);
+            label1.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(112, 79);
             label1.Name = "label1";
-            label1.Size = new Size(146, 20);
+            label1.Size = new Size(137, 17);
             label1.TabIndex = 2;
             label1.Text = "Insert an id to delete";
+            label1.Click += label1_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(286, 251);
+            button1.Anchor = AnchorStyles.None;
+            button1.BackColor = Color.SlateBlue;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(66, 153);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 3;
             button1.Text = "CANCEL";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(360, 260);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(deleteButton);
             Controls.Add(deleteTextBox);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
             Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();

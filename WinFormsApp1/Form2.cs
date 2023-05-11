@@ -85,8 +85,14 @@ namespace ProjectManagement.APP
             }
             else
             {
-                projectRepository.Add(project);
-                MessageBox.Show("Project Successfully Added");
+                try
+                {
+                    projectRepository.Add(project);
+                    MessageBox.Show("Project Successfully Added");
+                }catch(InvalidOperationException)
+                {
+                    MessageBox.Show("Unable to add project.");
+                }
 
             }
 
@@ -201,6 +207,47 @@ namespace ProjectManagement.APP
                 e.Cancel = false;
                 errorProvider.SetError(finishDateTimePicker, null);
             }
+        }
+
+        private void startDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void managerNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void finishDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }
