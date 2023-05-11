@@ -138,7 +138,7 @@
             Controls.Add(listView1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form4";
-            Text = "Form4";
+            Text = "All Projects";
             Load += Form4_Load;
             ResumeLayout(false);
         }

@@ -104,7 +104,7 @@
             Controls.Add(deleteTextBox);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
-            Text = "Form3";
+            Text = "Delete Project";
             ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
